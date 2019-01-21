@@ -14,10 +14,10 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: Joe Healey
+title: "Joe Healey"
 
 # Short description of your site
-description: Personal Gihub Pages of Joe Healey (WIP).
+description: P"ersonal Gihub Pages of Joe Healey (WIP)."
 
 # --- Navigation bar options --- #
 
@@ -42,15 +42,15 @@ avatar: "/img/avatar-icon.png"
 
 # Personalize the colors in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#F5F5F5"
-navbar-text-col: "#404040"
-navbar-children-col: "#F5F5F5"
-page-col: "#FFFFFF"
-link-col: "#008AFF"
-hover-col: "#0085A1"
-footer-col: "#F5F5F5"
-footer-text-col: "#777777"
-footer-link-col: "#404040"
+navbar-col: "#073642"
+navbar-text-col: "#cb4b16"
+navbar-children-col: "#b58900"
+page-col: "#002b36"
+link-col: "#268bd2"
+hover-col: "#93a1a1"
+footer-col: "#586e75"
+footer-text-col: "#657b83"
+footer-link-col: "#268bd2"
 
 # Alternatively, the navbar, footer, and page background can be set to use background images
 # instead of colour
@@ -64,7 +64,7 @@ footer-link-col: "#404040"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Joe Healey
+  name: "Joe Healey"
 
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
@@ -129,15 +129,15 @@ url-pretty: "jrjhealey.github.io"  # eg. "deanattali.com/beautiful-jekyll"
 # fb_comment_id: ""
 
 # Staticman support
-staticman:
-  repository : # GitHub username/repository eg. "daattali/beautiful-jekyll"
-  branch     : # eg. "master" If you're not using `master` branch, then you also need to update the `branch` parameter in `staticman.yml`
-  endpoint   : # URL of your own deployment (with trailing slash) (will fallback to a public GitLab instance)
-  reCaptcha:
-    # reCaptcha for Staticman (OPTIONAL)
-    # If you use reCaptcha, you must also set these parameters in staticman.yml
-    siteKey  : # Use your own site key, you need to apply for one on Google
-    secret   : # ENCRYPT your password by going to https://staticman3.herokuapp.com/v3/encrypt/<your-site-secret>
+#staticman:
+#  repository : # GitHub username/repository eg. "daattali/beautiful-jekyll"
+#  branch     : # eg. "master" If you're not using `master` branch, then you also need to update the `branch` parameter in `staticman.yml`
+#  endpoint   : # URL of your own deployment (with trailing slash) (will fallback to a public GitLab instance)
+#  reCaptcha:
+#    # reCaptcha for Staticman (OPTIONAL)
+#    # If you use reCaptcha, you must also set these parameters in staticman.yml
+#    siteKey  : # Use your own site key, you need to apply for one on Google
+#    secret   : # ENCRYPT your password by going to https://staticman3.herokuapp.com/v3/encrypt/<your-site-secret>
 
 # --- Misc --- #
 
