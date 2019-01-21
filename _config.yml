@@ -14,10 +14,10 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: "Joe Healey"
+title: Joe Healey
 
 # Short description of your site
-description: P"ersonal Gihub Pages of Joe Healey (WIP)."
+description: Personal Gihub Pages of Joe Healey (WIP).
 
 # --- Navigation bar options --- #
 
@@ -43,8 +43,8 @@ avatar: "/img/avatar-icon.png"
 # Personalize the colors in your website. Colour values can be any valid CSS colour
 
 navbar-col: "#073642"
-navbar-text-col: "#cb4b16"
-navbar-children-col: "#b58900"
+navbar-text-col: "#839496"
+navbar-children-col: "#839496"
 page-col: "#002b36"
 link-col: "#268bd2"
 hover-col: "#93a1a1"
