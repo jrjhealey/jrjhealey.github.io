@@ -1,21 +1,35 @@
 #!/usr/bin/env bash
 # Deploy Zephyr Venturecraft to GitHub Pages (jrjhealey.github.io)
-# Run this from inside your local clone of the repo, with the new
-# site files copied in alongside it.
-#   ./deploy.sh "optional commit message"
+#
+#   ./deploy.sh                        # commit everything with a dated message + push
+#   ./deploy.sh "your commit message"  # …or supply your own message
+#
+# GitHub Pages serves this repo straight from the `master` branch, so a push
+# is a deploy. Run this from the repo root.
 set -euo pipefail
 
-MSG="${1:-Update site}"
+cd "$(dirname "$0")"                       # always operate from the repo root
+MSG="${1:-Update site ($(date +%Y-%m-%d))}"
 
-# Sanity check: must run from the site root
-for f in index.html about.html styles.css main.js molecular.svg; do
-  [ -f "$f" ] || { echo "✗ Missing $f — run this from the repo root with the new files in place."; exit 1; }
+# Clear a stale index lock if one was left behind (e.g. by an external editor)
+if [ -f .git/index.lock ]; then
+  echo "• Removing stale .git/index.lock"
+  rm -f .git/index.lock
+fi
+
+# Sanity check: essential files must be present
+for f in index.html about.html styles.css main.js molecular.svg portrait.jpg .nojekyll; do
+  [ -e "$f" ] || { echo "✗ Missing $f — aborting."; exit 1; }
 done
 
-touch .nojekyll            # keep Jekyll off
-
 git add -A
-git commit -m "$MSG" || echo "Nothing to commit."
-git push origin master     # this repo's default branch is 'master'
 
-echo "✓ Pushed. Live shortly at https://jrjhealey.github.io"
+if git diff --cached --quiet; then
+  echo "• Nothing to commit — pushing any unpushed commits."
+else
+  git commit -m "$MSG"
+fi
+
+git push origin master
+
+echo "✓ Pushed to origin/master. Live shortly at https://jrjhealey.github.io"
