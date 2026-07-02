@@ -37,6 +37,7 @@ visitor has `prefers-reduced-motion` set.
 .
 ├── index.html        # Landing: hero, services, about, engagement formats, contact
 ├── about.html        # Background: portrait, full bio, education, career timeline, philosophy
+├── work.html         # Portfolio: rotating featured spotlight + filterable, expandable case-study list
 ├── styles.css        # Shared design system (tokens, layout, components, responsive rules)
 ├── main.js           # All interactivity (see below)
 ├── molecular.svg     # Molecular texture used behind the hero / page headers
@@ -105,6 +106,12 @@ updates within a minute or so.
   Joe's CV and are worth a final accuracy pass.
 - **Colours & type** — everything keys off the CSS custom properties at the top
   of `styles.css`; change those tokens to re-theme the whole site.
+- **Portfolio entries** — `work.html` is data-driven: edit the `PROJECTS` array
+  in the commented `<script>` near the bottom of the file. Copy a block to add an
+  entry, set `featured: true` to include it in the rotating spotlight, and add
+  `problem` / `approach` / `result` text to give a row its expandable case study
+  (blank fields are hidden). Filters are generated automatically from each
+  entry's `type`.
 
 ---
 

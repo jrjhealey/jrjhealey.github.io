@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Work — Dr Joe Healey | Zephyr Venturecraft</title>
+<meta name="description" content="Selected work and case studies — therapeutics and deep-tech engagements by Dr Joe Healey, Zephyr Venturecraft." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%230e2218'/><path d='M12 13L21 12M12 13L16 22M21 12L16 22' stroke='%23f1e9da' stroke-width='1.2' fill='none'/><circle cx='12' cy='13' r='2.7' fill='%23a0622a'/><circle cx='21' cy='12' r='2.3' fill='%23f1e9da'/><circle cx='16' cy='22' r='2.3' fill='%23f1e9da'/></svg>" />
+</head>
+<body>
+
+<!-- ============== NAV (always dark) ============== -->
+<header class="nav nav--dark" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="Zephyr Venturecraft home">
+      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M11 13L21 12M11 13L16 22M21 12L16 22" stroke="currentColor" stroke-width="1.1" fill="none"/>
+        <circle cx="11" cy="13" r="2.7" fill="#c07c3e"/>
+        <circle cx="21" cy="12" r="2.4" fill="none" stroke="currentColor" stroke-width="1.3"/>
+        <circle cx="16" cy="22" r="2.4" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      </svg>
+      <span class="brand__text">
+        <span class="brand__name">Zephyr Venturecraft</span>
+        <span class="brand__sub">Dr Joe Healey</span>
+      </span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nav__link" href="index.html#services">What I do</a>
+      <a class="nav__link" href="work.html">Work</a>
+      <a class="nav__link" href="about.html">Background</a>
+      <a class="nav__cta" href="index.html#contact">Book a call</a>
+    </nav>
+    <button class="nav__toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ============== PAGE HERO ============== -->
+<section class="page-hero">
+  <div class="page-hero__texture" style="background-image:url('molecular.svg')"></div>
+  <div class="wrap page-hero__inner">
+    <span class="eyebrow" data-reveal>Selected work</span>
+    <h1 data-reveal data-delay="1">Proof, not just <span class="serif-em copper">promises.</span></h1>
+    <p class="lead" data-reveal data-delay="2">A selection of engagements across therapeutics and deep tech. Many are confidential, so some are anonymised by sector — but the outcomes are real.</p>
+  </div>
+</section>
+
+<!-- ============== FEATURED SPOTLIGHT ============== -->
+<section class="spotlight section-pad" id="featured" hidden>
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <span class="eyebrow">Featured</span>
+      <h2>Highlights.</h2>
+    </div>
+    <div class="spot" id="spot">
+      <button class="spot-arrow spot-arrow--prev" type="button" aria-label="Previous highlight">&#8249;</button>
+      <div class="spot-card" aria-live="polite"></div>
+      <button class="spot-arrow spot-arrow--next" type="button" aria-label="Next highlight">&#8250;</button>
+    </div>
+    <div class="spot-dots" id="spot-dots" role="tablist" aria-label="Choose a highlight"></div>
+  </div>
+</section>
+
+<!-- ============== WORK LIST ============== -->
+<section class="wk section-pad" id="work">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <span class="eyebrow">The full list</span>
+      <h2>Engagements.</h2>
+      <p class="lead">Filter by the kind of work, or open any entry for the short story behind it.</p>
+    </div>
+    <div class="wk-filters" id="wk-filters" role="tablist" aria-label="Filter work by type"></div>
+    <div class="wk-list" id="wk-list"></div>
+    <p class="wk-none" id="wk-none" hidden>Nothing in this category yet.</p>
+  </div>
+</section>
+
+<!-- ============== CONTACT CTA ============== -->
+<section class="contact section-pad" id="contact">
+  <div class="wrap">
+    <div class="contact__card" data-reveal>
+      <span class="eyebrow" style="justify-content:center">Let's talk</span>
+      <h2>Have a problem that looks like one of these?</h2>
+      <p class="lead">Start with a free intro call. Tell me where you're stuck and we'll see if I can help.</p>
+      <div class="contact__actions">
+        <a class="btn btn--copper" data-magnetic href="mailto:hello@zephyrventurecraft.com?subject=Intro%20call">Email me <span class="arrow">→</span></a>
+        <a class="btn btn--ghost" href="index.html">Back to home</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__inner">
+      <a class="brand" href="index.html">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M11 13L21 12M11 13L16 22M21 12L16 22" stroke="currentColor" stroke-width="1.1" fill="none"/>
+          <circle cx="11" cy="13" r="2.7" fill="#c07c3e"/>
+          <circle cx="21" cy="12" r="2.4" fill="none" stroke="currentColor" stroke-width="1.3"/>
+          <circle cx="16" cy="22" r="2.4" fill="none" stroke="currentColor" stroke-width="1.3"/>
+        </svg>
+        <span class="brand__text"><span class="brand__name">Zephyr Venturecraft</span><span class="brand__sub">Dr Joe Healey</span></span>
+      </a>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="index.html#services">What I do</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">Background</a>
+        <a href="https://www.linkedin.com/in/jrjhealey" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
+    </div>
+    <div class="footer__base">
+      <span>© <span data-year>2026</span> Zephyr Venturecraft. The independent practice of Dr Joe Healey.</span>
+      <span>Made with intent, not templates.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" aria-label="Message on WhatsApp" href="#">
+  <span class="wa__pulse"></span>
+  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.3.6 4.5 1.8 6.4L3 29l7.3-2.2c1.8 1 3.9 1.5 6 1.5h.1C23.4 28.3 29 22.8 29 15.8 29 8.8 23 3 16 3zm0 22.6c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.3 1.3 1.3-4.2-.3-.4a10 10 0 01-1.6-5.6C5.1 9.9 10 5 16 5s10.9 4.9 10.9 10.8S22 25.6 16 25.6zm6-7.9c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.8.1-.2.3-.9 1.1-1.1 1.3-.2.2-.4.2-.7.1-1.9-.9-3.1-1.7-4.3-3.8-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6s-.8-1.9-1.1-2.6c-.3-.6-.6-.5-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.8 0 1.7 1.2 3.3 1.4 3.5.2.2 2.4 3.7 5.8 5.1 2.2.9 3 1 4.1.9.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+
+<script src="main.js"></script>
+
+<!-- ===================================================================
+     PORTFOLIO DATA + GALLERY LOGIC
+     To add an entry: copy a block in PROJECTS below and edit the fields.
+       title    : short name of the engagement
+       client   : name them, or anonymise by sector ("Clinical-stage oncology biotech")
+       sector   : free text tag (Oncology, Gene therapy, Platform, …)
+       type     : grouping used by the filters (keep these consistent)
+       year     : shown on the left of each list row
+       outcome  : one-line headline result (the bit people skim)
+       metric   : OPTIONAL { value, label } — the big number on featured cards
+       featured : true to include it in the rotating spotlight at the top
+       problem / approach / result : the expandable case-study text
+                  (leave any blank — blank fields are simply hidden)
+==================================================================== -->
+<script>
+(function () {
+  "use strict";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ===== EDIT YOUR PORTFOLIO HERE ===== */
+  var PROJECTS = [
+
+    /* ——— 1. A fully worked sample. Replace with a real engagement. ——— */
+    {
+      id: "oncology-series-a",
+      title: "Series A scientific narrative for an oncology platform",
+      client: "Clinical-stage oncology biotech (confidential)",
+      sector: "Oncology",
+      type: "Venture strategy",
+      year: "2024",
+      outcome: "Reframed the science into a fundable thesis ahead of a Series A.",
+      metric: { value: "£8M", label: "raised, oversubscribed" },
+      featured: true,
+      problem: "Strong underlying biology, but the data room and pitch buried the thesis under detail. Two earlier investor conversations had stalled at the technical diligence stage.",
+      approach: "Restructured the scientific narrative around a single defensible claim, rebuilt the milestone plan so each tranche de-risked a specific question, and prepared the founders for hostile technical diligence.",
+      result: "The round closed oversubscribed within ten weeks, with competing term sheets from two of the three target funds."
+    },
+
+    /* ——— 2. PLACEHOLDER — edit or delete ——— */
+    {
+      id: "fractional-cso",
+      title: "Fractional CSO through a pivotal data readout",
+      client: "Seed-stage gene-therapy startup",
+      sector: "Gene therapy",
+      type: "Fractional leadership",
+      year: "2023",
+      outcome: "Held the science seat through a make-or-break readout.",
+      metric: { value: "9 mo", label: "engagement" },
+      featured: true,
+      problem: "",
+      approach: "",
+      result: ""
+    },
+
+    /* ——— 3. PLACEHOLDER — edit or delete ——— */
+    {
+      id: "platform-diligence",
+      title: "Technical due diligence for a deep-tech fund",
+      client: "Early-stage venture fund",
+      sector: "Platform",
+      type: "Advisory",
+      year: "2023",
+      outcome: "Independent scientific read on a prospective platform investment.",
+      metric: null,
+      featured: false,
+      problem: "",
+      approach: "",
+      result: ""
+    }
+
+  ];
+  /* ===== END PORTFOLIO DATA ===== */
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  }
+  function hasCase(p) { return !!(p.problem || p.approach || p.result); }
+
+  /* ---------------- FEATURED SPOTLIGHT ---------------- */
+  var featured = PROJECTS.filter(function (p) { return p.featured; });
+  var section = document.getElementById("featured");
+  var spot = document.getElementById("spot");
+  var dotsEl = document.getElementById("spot-dots");
+  var cardEl = spot ? spot.querySelector(".spot-card") : null;
+  var fi = 0, timer = null, paused = false;
+
+  function cardHTML(p) {
+    var metric = p.metric
+      ? '<div class="spot-metric">' + esc(p.metric.value) + '<span>' + esc(p.metric.label) + '</span></div>'
+      : '<div class="spot-metric spot-metric--type">' + esc(p.type) + '</div>';
+    var cta = hasCase(p)
+      ? '<button class="btn btn--copper spot-cta" type="button" data-go="' + esc(p.id) + '">Read the case study <span class="arrow">&#8594;</span></button>'
+      : '';
+    return '' +
+      '<div class="spot-card__body">' +
+        '<div class="spot-tagrow"><span class="spot-tag">' + esc(p.sector) + '</span><span class="spot-tag spot-tag--type">' + esc(p.type) + '</span></div>' +
+        '<h3>' + esc(p.title) + '</h3>' +
+        '<p class="spot-outcome">' + esc(p.outcome) + '</p>' +
+        cta +
+      '</div>' +
+      '<div class="spot-card__aside">' +
+        metric +
+        '<div class="spot-meta"><span>' + esc(p.client) + '</span><span>' + esc(p.year) + '</span></div>' +
+      '</div>';
+  }
+  function renderDots() {
+    if (!dotsEl) return;
+    dotsEl.innerHTML = featured.map(function (_, i) {
+      return '<button class="spot-dot' + (i === fi ? " is-active" : "") + '" type="button" role="tab" aria-label="Highlight ' + (i + 1) + '"' + (i === fi ? ' aria-selected="true"' : "") + "></button>";
+    }).join("");
+    Array.prototype.forEach.call(dotsEl.children, function (b, i) {
+      b.addEventListener("click", function () { goTo(i); });
+    });
+  }
+  function show(i) {
+    fi = (i % featured.length + featured.length) % featured.length;
+    cardEl.style.opacity = "0";
+    setTimeout(function () {
+      cardEl.innerHTML = cardHTML(featured[fi]);
+      cardEl.style.opacity = "1";
+      bindGo(cardEl);
+      renderDots();
+    }, 200);
+  }
+  function goTo(i) { show(i); restart(); }
+  function nextSlide() { show(fi + 1); }
+  function restart() {
+    if (timer) clearInterval(timer);
+    if (!reduce && !paused && featured.length > 1) timer = setInterval(nextSlide, 6500);
+  }
+
+  if (!featured.length || !spot) {
+    if (section) section.hidden = true;
+  } else {
+    section.hidden = false;
+    show(0);
+    var prev = spot.querySelector(".spot-arrow--prev");
+    var next = spot.querySelector(".spot-arrow--next");
+    if (featured.length > 1) {
+      prev.addEventListener("click", function () { goTo(fi - 1); });
+      next.addEventListener("click", function () { goTo(fi + 1); });
+      spot.addEventListener("mouseenter", function () { paused = true; restart(); });
+      spot.addEventListener("mouseleave", function () { paused = false; restart(); });
+      spot.addEventListener("focusin", function () { paused = true; restart(); });
+      spot.addEventListener("focusout", function () { paused = false; restart(); });
+      restart();
+    } else {
+      prev.hidden = true; next.hidden = true; if (dotsEl) dotsEl.hidden = true;
+    }
+  }
+
+  /* ---------------- FILTERABLE LIST ---------------- */
+  var listEl = document.getElementById("wk-list");
+  var filtersEl = document.getElementById("wk-filters");
+  var noneEl = document.getElementById("wk-none");
+  var activeType = "All";
+
+  var types = ["All"].concat(PROJECTS.map(function (p) { return p.type; }).filter(function (t, i, a) { return t && a.indexOf(t) === i; }));
+
+  function rowHTML(p) {
+    var tags = '<span class="wk-row__tag">' + esc(p.sector) + '</span><span class="wk-row__tag wk-row__tag--type">' + esc(p.type) + '</span>';
+    var caseInner = "";
+    if (hasCase(p)) {
+      function block(label, txt) { return txt ? '<div class="wk-case__block"><h4>' + label + "</h4><p>" + esc(txt) + "</p></div>" : ""; }
+      caseInner = '<div class="wk-case">' + block("The problem", p.problem) + block("What I did", p.approach) + block("The outcome", p.result) + "</div>";
+    } else {
+      caseInner = '<p class="wk-empty">Full write-up coming soon.</p>';
+    }
+    var open = '<button class="wk-row__head" type="button" aria-expanded="false" aria-controls="panel-' + esc(p.id) + '">' +
+        '<span class="wk-row__year">' + esc(p.year) + "</span>" +
+        '<span class="wk-row__main"><span class="wk-row__title">' + esc(p.title) + "</span>" +
+          '<span class="wk-row__tags">' + tags + "</span>" +
+          '<span class="wk-row__outcome">' + esc(p.outcome) + "</span></span>" +
+        '<span class="wk-row__chev" aria-hidden="true">&#8964;</span>' +
+      "</button>";
+    var panel = '<div class="wk-row__panel" id="panel-' + esc(p.id) + '"><div class="wk-row__panel-inner">' + caseInner + "</div></div>";
+    return '<article class="wk-row" id="row-' + esc(p.id) + '" data-type="' + esc(p.type) + '">' + open + panel + "</article>";
+  }
+
+  function renderList() {
+    listEl.innerHTML = PROJECTS.map(rowHTML).join("");
+    Array.prototype.forEach.call(listEl.querySelectorAll(".wk-row__head"), function (head) {
+      head.addEventListener("click", function () {
+        var row = head.closest(".wk-row");
+        var isOpen = row.classList.contains("is-open");
+        // single-open accordion
+        Array.prototype.forEach.call(listEl.querySelectorAll(".wk-row.is-open"), function (r) {
+          r.classList.remove("is-open");
+          r.querySelector(".wk-row__head").setAttribute("aria-expanded", "false");
+        });
+        if (!isOpen) { row.classList.add("is-open"); head.setAttribute("aria-expanded", "true"); }
+      });
+    });
+  }
+  function renderFilters() {
+    filtersEl.innerHTML = types.map(function (t) {
+      return '<button class="wk-chip' + (t === activeType ? " is-active" : "") + '" type="button" role="tab"' + (t === activeType ? ' aria-selected="true"' : "") + ' data-type="' + esc(t) + '">' + esc(t) + "</button>";
+    }).join("");
+    Array.prototype.forEach.call(filtersEl.children, function (chip) {
+      chip.addEventListener("click", function () { applyFilter(chip.getAttribute("data-type")); });
+    });
+  }
+  function applyFilter(t) {
+    activeType = t;
+    Array.prototype.forEach.call(filtersEl.children, function (chip) {
+      var on = chip.getAttribute("data-type") === t;
+      chip.classList.toggle("is-active", on);
+      if (on) chip.setAttribute("aria-selected", "true"); else chip.removeAttribute("aria-selected");
+    });
+    var shown = 0;
+    Array.prototype.forEach.call(listEl.querySelectorAll(".wk-row"), function (row) {
+      var match = (t === "All" || row.getAttribute("data-type") === t);
+      row.hidden = !match;
+      if (match) shown++;
+    });
+    if (noneEl) noneEl.hidden = shown !== 0;
+  }
+
+  if (listEl && filtersEl) {
+    renderList();
+    renderFilters();
+    applyFilter("All");
+  }
+
+  /* featured → open the matching list entry */
+  function bindGo(scope) {
+    Array.prototype.forEach.call(scope.querySelectorAll("[data-go]"), function (btn) {
+      btn.addEventListener("click", function () { openCase(btn.getAttribute("data-go")); });
+    });
+  }
+  function openCase(id) {
+    if (activeType !== "All") applyFilter("All");
+    var row = document.getElementById("row-" + id);
+    if (!row) return;
+    Array.prototype.forEach.call(listEl.querySelectorAll(".wk-row.is-open"), function (r) {
+      r.classList.remove("is-open");
+      r.querySelector(".wk-row__head").setAttribute("aria-expanded", "false");
+    });
+    row.classList.add("is-open");
+    row.querySelector(".wk-row__head").setAttribute("aria-expanded", "true");
+    row.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
+  }
+})();
+</script>
+</body>
+</html>
