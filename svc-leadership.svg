@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Abstract leadership orbit">
+  <defs>
+    <linearGradient id="bgL" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4eede"/>
+      <stop offset="1" stop-color="#e7ddc9"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bgL)"/>
+  <!-- orbit rings around a central seat -->
+  <g fill="none" stroke="#173829" stroke-opacity="0.28" stroke-width="1.6">
+    <circle cx="400" cy="250" r="90"/>
+    <circle cx="400" cy="250" r="150"/>
+    <circle cx="400" cy="250" r="210"/>
+  </g>
+  <!-- connecting spokes -->
+  <g stroke="#245038" stroke-opacity="0.4" stroke-width="1.4">
+    <line x1="400" y1="250" x2="490" y2="250"/>
+    <line x1="400" y1="250" x2="294" y2="144"/>
+    <line x1="400" y1="250" x2="400" y2="40"/>
+    <line x1="400" y1="250" x2="561" y2="145"/>
+  </g>
+  <!-- satellite nodes on the rings -->
+  <g fill="#245038">
+    <circle cx="490" cy="250" r="11"/>
+    <circle cx="294" cy="144" r="10"/>
+    <circle cx="250" cy="250" r="9"/>
+    <circle cx="561" cy="145" r="10"/>
+    <circle cx="400" cy="40" r="10"/>
+    <circle cx="520" cy="400" r="9"/>
+  </g>
+  <!-- central copper seat -->
+  <circle cx="400" cy="250" r="26" fill="#a0622a"/>
+  <circle cx="400" cy="250" r="38" fill="none" stroke="#c07c3e" stroke-opacity="0.6" stroke-width="1.8"/>
+</svg>
