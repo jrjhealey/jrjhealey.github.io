@@ -1,11 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Zephyr Venturecraft logo mark">
-  <circle cx="100" cy="100" r="94" fill="#0e2218"/>
-  <g stroke="#f1e9da" stroke-width="3.2" fill="none" stroke-linecap="round">
-    <path d="M75 82 L131 75"/>
-    <path d="M75 82 L100 138"/>
-    <path d="M131 75 L100 138"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Zephyr Venturecraft">
+  <rect x="2.5" y="2.5" width="95" height="95" rx="22" fill="#14261b" stroke="#f1e9da" stroke-opacity="0.3" stroke-width="3"/>
+  <g fill="none" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 31 L72 31 L32 69 L64 69" stroke="#f1e9da"/>
+    <path d="M20 31 L33 31" stroke="#a0622a"/>
+    <path d="M71 69 L84 69" stroke="#a0622a"/>
   </g>
-  <circle cx="75" cy="82" r="17" fill="#a0622a"/>
-  <circle cx="131" cy="75" r="14" fill="#f1e9da"/>
-  <circle cx="100" cy="138" r="14" fill="#f1e9da"/>
 </svg>

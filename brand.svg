@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Zephyr Venturecraft">
-  <rect x="0" y="0" width="100" height="100" rx="23" fill="#14261b"/>
+  <rect x="2.5" y="2.5" width="95" height="95" rx="22" fill="#14261b" stroke="#f1e9da" stroke-opacity="0.3" stroke-width="3"/>
   <g fill="none" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
     <path d="M40 31 L72 31 L32 69 L64 69" stroke="#f1e9da"/>
     <path d="M20 31 L33 31" stroke="#a0622a"/>
