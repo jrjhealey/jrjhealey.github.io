@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 200" role="img" aria-label="Zephyr Venturecraft — deep-tech and biotech advisory">
   <rect x="10" y="40" width="120" height="120" rx="28" fill="#14261b"/>
-  <g fill="none" stroke-width="14.4" stroke-linecap="round" stroke-linejoin="round" transform="translate(10 40) scale(1.2)">
-    <path d="M40 31 L72 31 L32 69 L64 69" stroke="#f1e9da"/>
-    <path d="M20 31 L33 31" stroke="#a0622a"/>
-    <path d="M71 69 L84 69" stroke="#a0622a"/>
+  <g fill="none" stroke-width="13.2" stroke-linecap="round" stroke-linejoin="round" transform="translate(10 40) scale(1.2)">
+    <path d="M44 33 L72 33 L30 67 L58 67" stroke="#f1e9da"/>
+    <path d="M20 33 L27 33" stroke="#a0622a"/>
+    <path d="M75 67 L83 67" stroke="#a0622a"/>
   </g>
   <text x="164" y="98" font-family="'Playfair Display', Georgia, serif" font-size="58" font-weight="600" fill="#14261b">Zephyr Venturecraft</text>
   <text x="166" y="134" font-family="'Inter', system-ui, sans-serif" font-size="19" letter-spacing="4.5" fill="#a0622a">DEEP-TECH &amp; BIOTECH ADVISORY</text>

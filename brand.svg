@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Zephyr Venturecraft">
   <rect x="2.5" y="2.5" width="95" height="95" rx="22" fill="#14261b" stroke="#f1e9da" stroke-opacity="0.3" stroke-width="3"/>
-  <g fill="none" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M40 31 L72 31 L32 69 L64 69" stroke="#f1e9da"/>
-    <path d="M20 31 L33 31" stroke="#a0622a"/>
-    <path d="M71 69 L84 69" stroke="#a0622a"/>
+  <g fill="none" stroke-width="11" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M44 33 L72 33 L30 67 L58 67" stroke="#f1e9da"/>
+    <path d="M20 33 L27 33" stroke="#a0622a"/>
+    <path d="M75 67 L83 67" stroke="#a0622a"/>
   </g>
 </svg>
