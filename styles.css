@@ -258,13 +258,15 @@ body.menu-open .nav__toggle span:nth-child(3) { transform: translateY(-9px) rota
    ============================================================ */
 .sec-head { max-width: 640px; margin-bottom: clamp(40px, 6vw, 72px); }
 .sec-head h2 { margin-top: 18px; }
+.sec-head .lead { margin-top: 20px; }
+.work .sec-head { margin-bottom: clamp(20px, 2.6vw, 32px); }
 .sec-head.center { margin-inline: auto; text-align: center; }
 .sec-head.center .eyebrow::before { display: none; }
 
 /* ============================================================
    SERVICES
    ============================================================ */
-.services { background: var(--cream); padding-bottom: clamp(44px, 6vw, 84px); }
+.services { background: var(--cream); padding-top: clamp(40px, 5vw, 80px); padding-bottom: clamp(44px, 6vw, 84px); }
 .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 2.4vw, 30px); }
 .svc-card {
   background: #fffdf8; border: 1px solid var(--line-soft); border-radius: 18px; overflow: hidden;
@@ -373,6 +375,7 @@ section[data-theme] > .wrap { position: relative; z-index: 1; }
 .footer__links a { font-size: 0.86rem; opacity: 0.8; transition: opacity 0.3s, color 0.3s; }
 .footer__links a:hover { opacity: 1; color: var(--copper-light); }
 .footer__base { margin-top: 36px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.78rem; opacity: 0.6; display:flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;}
+.footer__legal { margin-top: 14px; font-size: 0.72rem; line-height: 1.5; color: rgba(248,243,234,0.42); max-width: 70ch; }
 
 /* ============================================================
    WHATSAPP FLOAT
