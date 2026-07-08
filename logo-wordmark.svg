@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" role="img" aria-label="Zephyr Venturecraft">
+  <circle cx="80" cy="80" r="72" fill="#0e2218"/>
+  <g stroke="#f1e9da" stroke-width="2.6" fill="none" stroke-linecap="round" transform="translate(80 80) scale(0.72) translate(-100 -100)">
+    <path d="M75 82 L131 75"/>
+    <path d="M75 82 L100 138"/>
+    <path d="M131 75 L100 138"/>
+  </g>
+  <g transform="translate(80 80) scale(0.72) translate(-100 -100)">
+    <circle cx="75" cy="82" r="17" fill="#a0622a"/>
+    <circle cx="131" cy="75" r="14" fill="#f1e9da"/>
+    <circle cx="100" cy="138" r="14" fill="#f1e9da"/>
+  </g>
+  <text x="180" y="76" font-family="'Playfair Display', Georgia, serif" font-size="42" font-weight="600" fill="#0e2218">Zephyr Venturecraft</text>
+  <text x="182" y="106" font-family="'Inter', system-ui, sans-serif" font-size="15" letter-spacing="4" fill="#a0622a">DEEP-TECH &amp; BIOTECH ADVISORY</text>
+</svg>
