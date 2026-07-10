@@ -446,43 +446,6 @@
     metrics();
   }
 
-  /* ---------- scattered molecular field (static, seeded, non-repeating) ---------- */
-  function mulberry32(a) { return function () { a |= 0; a = a + 0x6D2B79F5 | 0; var t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
-  function initMolecules(cv) {
-    var ctx = cv.getContext("2d"); if (!ctx) return;
-    var DPR = Math.min(window.devicePixelRatio || 1, 2);
-    function atom(x, y, r, cu) { ctx.beginPath(); ctx.arc(x, y, r, 0, 6.2832); ctx.fillStyle = cu ? "rgba(160,98,42,0.9)" : "rgba(14,34,24,0.9)"; ctx.fill(); }
-    function hex() { var p = [], i, a; for (i = 0; i < 6; i++) { a = Math.PI / 3 * i - Math.PI / 2; p.push([Math.cos(a) * 22, Math.sin(a) * 22]); }
-      ctx.beginPath(); p.forEach(function (q, i) { i ? ctx.lineTo(q[0], q[1]) : ctx.moveTo(q[0], q[1]); }); ctx.closePath(); ctx.stroke();
-      p.forEach(function (q) { atom(q[0], q[1], 2.6, false); }); ctx.beginPath(); ctx.moveTo(0, 22); ctx.lineTo(0, 44); ctx.stroke(); atom(0, 44, 2.6, true); }
-    function lattice() { var n = [[0, 0], [46, -14], [70, 28], [26, 44], [104, 10]], e = [[0, 1], [1, 2], [2, 3], [3, 0], [1, 4], [2, 4]];
-      e.forEach(function (pr) { ctx.beginPath(); ctx.moveTo(n[pr[0]][0], n[pr[0]][1]); ctx.lineTo(n[pr[1]][0], n[pr[1]][1]); ctx.stroke(); });
-      n.forEach(function (q, i) { atom(q[0], q[1], i === 2 ? 4 : 3, i === 2); }); }
-    function helix() { ctx.beginPath(); ctx.moveTo(0, 0); ctx.bezierCurveTo(22, 12, 22, 34, 0, 46); ctx.bezierCurveTo(-22, 58, -22, 80, 0, 92); ctx.stroke();
-      ctx.beginPath(); ctx.moveTo(0, 0); ctx.bezierCurveTo(-22, 12, -22, 34, 0, 46); ctx.bezierCurveTo(22, 58, 22, 80, 0, 92); ctx.stroke();
-      [11, 35, 57, 81].forEach(function (y) { ctx.beginPath(); ctx.moveTo(-11, y); ctx.lineTo(11, y); ctx.stroke(); }); }
-    function squiggle() { ctx.beginPath(); ctx.moveTo(0, 0); ctx.bezierCurveTo(40, -16, 70, 26, 110, 8); ctx.bezierCurveTo(150, -8, 180, 30, 210, 16); ctx.stroke(); }
-    var motifs = [hex, lattice, helix, squiggle];
-    function scene() {
-      var W = cv.clientWidth, H = cv.clientHeight; if (!W || !H) return;
-      cv.width = Math.round(W * DPR); cv.height = Math.round(H * DPR); ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-      ctx.clearRect(0, 0, W, H); ctx.lineWidth = 1.1; ctx.lineCap = "round"; ctx.lineJoin = "round"; ctx.strokeStyle = "rgba(14,34,24,0.9)";
-      var rng = mulberry32(20260710);
-      var count = Math.max(6, Math.min(26, Math.round(W * H / 60000)));   // density ~ matches the original tiled texture
-      var placed = [], minD = Math.min(W, H) * 0.10;
-      for (var i = 0; i < count; i++) {
-        var x, y, tries = 0, ok;
-        do { x = W * (0.32 + 0.68 * Math.pow(rng(), 0.6)); y = rng() * H; ok = true; for (var j = 0; j < placed.length; j++) { if (Math.hypot(x - placed[j][0], y - placed[j][1]) < minD) { ok = false; break; } } tries++; } while (!ok && tries < 30);
-        placed.push([x, y]);
-        ctx.save(); ctx.translate(x, y); ctx.rotate((rng() - 0.5) * 1.4); var s = 0.8 + rng() * 0.7; ctx.scale(s, s);
-        ctx.globalAlpha = 0.75 + rng() * 0.25; motifs[(rng() * motifs.length) | 0](); ctx.restore();
-      }
-      ctx.globalAlpha = 1;
-    }
-    scene();
-    var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(scene, 150); });
-  }
-
   /* ---------- boot canvases ---------- */
   if (!reduceMotion) {
     var heroCv = document.getElementById("wind");
@@ -494,7 +457,6 @@
     if (hCv) hCv.style.display = "none";
     document.querySelectorAll("canvas[data-helix], canvas[data-strand]").forEach(function (cv) { cv.style.display = "none"; });
   }
-  document.querySelectorAll("canvas[data-molecules]").forEach(initMolecules);
 })();
 
 /* ============================================================
