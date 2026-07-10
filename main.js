@@ -458,3 +458,73 @@
     document.querySelectorAll("canvas[data-helix], canvas[data-strand]").forEach(function (cv) { cv.style.display = "none"; });
   }
 })();
+
+/* ============================================================
+   COOKIE CONSENT + GOOGLE ANALYTICS (GA4)
+   GA loads only after the visitor accepts. Choice is remembered.
+   ============================================================ */
+(function () {
+  "use strict";
+  var GA_ID = "G-QTPLVTTCT8";
+  var KEY = "zvc-consent";
+  var gaLoaded = false;
+  var banner = null;
+
+  function store(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+  function read() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+
+  function loadGA() {
+    if (gaLoaded) return;
+    gaLoaded = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", GA_ID);
+  }
+
+  function decide(v) {
+    store(v);
+    if (v === "granted") loadGA();
+    if (banner) banner.classList.remove("in");
+  }
+
+  function showBanner() {
+    if (banner) { banner.classList.add("in"); return; }
+    banner = document.createElement("div");
+    banner.className = "cc";
+    banner.setAttribute("role", "dialog");
+    banner.setAttribute("aria-label", "Cookie notice");
+    banner.innerHTML =
+      '<p class="cc__text">This site uses cookies to measure traffic with Google Analytics. They’re only set if you accept. See our <a href="privacy.html">privacy &amp; cookie notice</a>.</p>' +
+      '<div class="cc__actions">' +
+        '<button class="cc__btn cc__btn--ghost" type="button" data-cc="denied">Decline</button>' +
+        '<button class="cc__btn cc__btn--accept" type="button" data-cc="granted">Accept</button>' +
+      '</div>';
+    document.body.appendChild(banner);
+    banner.addEventListener("click", function (e) {
+      var t = e.target.closest("[data-cc]");
+      if (t) decide(t.getAttribute("data-cc"));
+    });
+    requestAnimationFrame(function () { banner.classList.add("in"); });
+  }
+
+  /* footer link to review / change the choice later */
+  function addFooterLink() {
+    var nav = document.querySelector(".footer__links");
+    if (!nav) return;
+    var a = document.createElement("a");
+    a.href = "#";
+    a.textContent = "Cookie settings";
+    a.addEventListener("click", function (e) { e.preventDefault(); showBanner(); });
+    nav.appendChild(a);
+  }
+
+  var choice = read();
+  if (choice === "granted") loadGA();
+  else if (choice !== "denied") showBanner();
+  addFooterLink();
+})();

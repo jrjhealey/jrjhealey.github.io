@@ -18,7 +18,7 @@ if [ -f .git/index.lock ]; then
 fi
 
 # Sanity check: essential files must be present
-for f in index.html about.html portfolio.html styles.css main.js .nojekyll CNAME assets/mark.png assets/molecular.svg assets/portrait.jpg; do
+for f in index.html about.html portfolio.html privacy.html styles.css main.js .nojekyll CNAME assets/mark.png assets/molecular.svg assets/portrait.jpg; do
   [ -e "$f" ] || { echo "✗ Missing $f — aborting."; exit 1; }
 done
 
