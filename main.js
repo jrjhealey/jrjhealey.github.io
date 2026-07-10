@@ -468,8 +468,8 @@
       cv.width = Math.round(W * DPR); cv.height = Math.round(H * DPR); ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
       ctx.clearRect(0, 0, W, H); ctx.lineWidth = 1.1; ctx.lineCap = "round"; ctx.lineJoin = "round"; ctx.strokeStyle = "rgba(14,34,24,0.9)";
       var rng = mulberry32(20260710);
-      var count = Math.max(3, Math.min(8, Math.round(W * H / 170000)));   // low density — not crowded
-      var placed = [], minD = Math.min(W, H) * 0.26;
+      var count = Math.max(5, Math.min(20, Math.round(W * H / 75000)));   // density ~ matches the original tiled texture
+      var placed = [], minD = Math.min(W, H) * 0.12;
       for (var i = 0; i < count; i++) {
         var x, y, tries = 0, ok;
         do { x = rng() * W; y = rng() * H; ok = true; for (var j = 0; j < placed.length; j++) { if (Math.hypot(x - placed[j][0], y - placed[j][1]) < minD) { ok = false; break; } } tries++; } while (!ok && tries < 25);
