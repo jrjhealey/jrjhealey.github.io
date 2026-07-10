@@ -176,17 +176,33 @@
 
     {
       id: "venture-partner-saras",
-      title: "Venture Partner, Saras",
-      client: "Saras",
+      title: "Venture Partner, Saras Capital",
+      client: "Saras Capital",
       sector: "Venture",
-      type: "Venture partner",
+      type: "Venture strategy",
       year: "Current",
       outcome: "Diligence and portfolio support on the investor side of the table.",
       metric: null,
       featured: true,
-      problem: "Saras backs deep-tech and life-science companies whose investment case ultimately rests on the science.",
-      approach: "I scout and assess opportunities for Saras and lead technical diligence on prospective deals, then stay useful to portfolio companies as someone who's built one.",
+      problem: "Saras Capital backs deep-tech and life-science companies whose investment case ultimately rests on the science.",
+      approach: "I scout and assess opportunities for Saras Capital and lead technical diligence on prospective deals, then stay useful to portfolio companies as someone who's built one.",
       result: "Well-sourced, technically vetted opportunities, and founder-level support after the cheque."
+    },
+
+    {
+      id: "ccp",
+      title: "Consultant, Cambridge Consulting Partnerships",
+      client: "Cambridge Consulting Partnerships",
+      sector: "Deep tech / life sciences",
+      type: "Advisory & diligence",
+      year: "Current",
+      outcome: "Synthetic biology, drug-delivery and venture-building expertise within the CCP consulting network.",
+      metric: null,
+      featured: true,
+      problem: "Investors and deep-tech companies often need niche scientific and commercial expertise on tap — the kind that's hard to justify hiring full-time.",
+      approach: "As a consultant in the Cambridge Consulting Partnerships network, I contribute synthetic biology, drug-delivery and venture-building expertise to cross-functional teams — from technical due diligence to growth and strategy for clients across deep tech and life sciences.",
+      result: "Clients get senior, specialist input exactly when a project calls for it, drawn from a wider bench of experts.",
+      link: { url: "https://ccpartnerships.com/staff/joseph-healey/", label: "View my profile at Cambridge Consulting Partnerships" }
     },
 
     {
@@ -311,7 +327,8 @@
           '<span class="wk-row__outcome">' + esc(p.outcome) + "</span></span>" +
         '<span class="wk-row__chev" aria-hidden="true">&#8964;</span>' +
       "</button>";
-    var panel = '<div class="wk-row__panel" id="panel-' + esc(p.id) + '"><div class="wk-row__panel-inner">' + caseInner + "</div></div>";
+    var linkHTML = (p.link && p.link.url) ? '<p class="wk-case__link"><a href="' + esc(p.link.url) + '" target="_blank" rel="noopener">' + esc(p.link.label || "Learn more") + ' ↗</a></p>' : "";
+    var panel = '<div class="wk-row__panel" id="panel-' + esc(p.id) + '"><div class="wk-row__panel-inner">' + caseInner + linkHTML + "</div></div>";
     return '<article class="wk-row" id="row-' + esc(p.id) + '" data-type="' + esc(p.type) + '">' + open + panel + "</article>";
   }
 
