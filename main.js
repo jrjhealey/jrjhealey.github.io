@@ -460,35 +460,49 @@
 })();
 
 /* ============================================================
-   COOKIE CONSENT + GOOGLE ANALYTICS (GA4)
-   GA loads only after the visitor accepts. Choice is remembered.
+   COOKIE CONSENT + GOOGLE ANALYTICS (GA4) — Consent Mode v2
+   The tag loads on every page but analytics storage defaults to
+   "denied": no cookies or identifiers until the visitor accepts.
    ============================================================ */
 (function () {
   "use strict";
   var GA_ID = "G-QTPLVTTCT8";
   var KEY = "zvc-consent";
-  var gaLoaded = false;
   var banner = null;
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { window.dataLayer.push(arguments); }
+  window.gtag = gtag;
+
+  /* Consent Mode v2 — everything denied by default until a choice is made */
+  gtag("consent", "default", {
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    analytics_storage: "denied",
+    functionality_storage: "granted",
+    security_storage: "granted",
+    wait_for_update: 500
+  });
+
+  /* Load the Google tag (present but suppressed until consent is granted) */
+  var s = document.createElement("script");
+  s.async = true;
+  s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+  document.head.appendChild(s);
+  gtag("js", new Date());
+  gtag("config", GA_ID);
 
   function store(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
   function read() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
 
-  function loadGA() {
-    if (gaLoaded) return;
-    gaLoaded = true;
-    var s = document.createElement("script");
-    s.async = true;
-    s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
-    document.head.appendChild(s);
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function () { window.dataLayer.push(arguments); };
-    window.gtag("js", new Date());
-    window.gtag("config", GA_ID);
+  function apply(v) {
+    gtag("consent", "update", { analytics_storage: v === "granted" ? "granted" : "denied" });
   }
 
   function decide(v) {
     store(v);
-    if (v === "granted") loadGA();
+    apply(v);
     if (banner) banner.classList.remove("in");
   }
 
@@ -524,7 +538,7 @@
   }
 
   var choice = read();
-  if (choice === "granted") loadGA();
+  if (choice === "granted") apply("granted");
   else if (choice !== "denied") showBanner();
   addFooterLink();
 })();
